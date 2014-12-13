@@ -1,0 +1,22 @@
+<script>
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+var first = getUrlVars()["id"];
+var db = window.openDatabase("Database", "1.0", "ReformaP", 200000);
+db.transaction(
+    function(tx){
+        tx.executeSql('delete from notas where id='+first,[],function(){
+         location.href="inicio.html";
+        },function(e){
+            alert(e);
+        });
+    },
+    function(e){
+    alert(e);
+});
+</script>

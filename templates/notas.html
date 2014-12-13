@@ -1,0 +1,17 @@
+﻿<ion-view title="Notas">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <ion-list>
+      <ion-item ng-repeat="nota in notas">
+        <table>
+            <tr>
+                <td class="td"><a href="nota.html?id={{nota.id}}" target="_blank"><img src="img/del.png" /></a></td>
+                <td><a class="nota" href="leerley.html?id={{nota.id}}&a={{nota.archivo}}" target="_blank">{{nota.data}}</a></td>
+            </tr>
+        </table>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

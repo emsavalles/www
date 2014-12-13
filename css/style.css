@@ -1,0 +1,36 @@
+/* Empty. Add your own CSS if you like */
+body{background-color:#fff !important}
+.intro{
+    padding:5px;
+    text-align:justify;
+}
+
+.bar-stable{
+    background-color:#426660 !important;
+}
+.title{
+    color:#fff !important ; 
+}
+
+.bar-stable .button {
+   color:#fff !important ; 
+}
+
+.oculto{display:none}
+.fdo{display:block; border-bottom:thin inset #ddd;}
+.mark{background-color:#FC0;}
+/*.fdo:nth-child(even){background-color:#CCC;}*/
+.item,.item-content {overflow:auto !important; white-space:inherit !important}
+.item img{
+    width:25px;
+}
+td .nota{
+    margin:0 0 0 1%;
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-decoration: none;
+
+}
+.item .td{width:30px; text-align:center}

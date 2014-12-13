@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+
+
+    <style>
+    * {
+
+    box-sizing: border-box;
+}
+    body,html{height:100%; background-color: #9b9b9b;}
+    
+    a{position:absolute;
+    bottom:0; 
+    padding:10px;
+    background-color:#eee;
+    width:100%;
+    text-decoration:none;
+    text-align:center;
+    color:#333;
+    font-weight: bold;
+    font-size:25px;
+    }
+    .btn{
+        width: 100%;
+        margin:2px;
+        border: 1px solid #333;
+        color:#fff;
+    }
+    </style>
+	<title>Reforma Penal</title>
+</head>
+
+<body style="margin: 0; padding:0">
+
+<div class="btn" style="display:none; background-color: red;" onclick="borrartabla()">Borrar tabla</div>
+<div class="btn" style="display:none; background-color: green;" onclick="sincronizaLeyes()">Sincroniza tabla</div>
+
+<div style="width: 100%; height:100%; position:relative; background-image: url('img/inicio.jpg'); background-size:100% auto; background-repeat:no-repeat">
+<a href="inicio.html">Entrar</a>
+</div>
+        <script src="js/jquery.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+
+        <script>
+ document.addEventListener("deviceready", onDeviceReady, false);
+   
+   function onDeviceReady() {
+        var db = window.openDatabase("Database", "1.0", "ReformaP", 200000);
+        db.transaction(populateDB, function(e){
+            alert(e);
+        });
+    }
+
+    // Populate the database 
+    //
+    function populateDB(tx) {
+//        tx.executeSql('DROP TABLE IF EXISTS notas');
+    }        
+        </script>
+</body>
+</html>

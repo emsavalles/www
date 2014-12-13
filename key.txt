@@ -1,0 +1,4 @@
+keytool -genkey -v -keystore nsjpslp.keystore -alias nsjpslp -keyalg RSA -keysize 2048 -validity 10000
+pass: karumba
+
+keytool -genkey -noprompt -alias nsjpslp -dname "CN=Ismael Gomez, OU=emsavalles, O=emsavalles, L=san luis potosi, S=san luis potosi, C=MX" -keystore nsjpslp.kesystore -storepass karumba -keypass karumba
